@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #f7f4ee;
+  color: #1a1814;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle paper texture background */
+.bg-paper {
+  background-color: #f7f4ee;
+  background-image:
+    radial-gradient(ellipse at top, rgba(189, 135, 71, 0.08), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(189, 135, 71, 0.06), transparent 50%);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #d9bd8e;
+  border-radius: 4px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 0.35s ease-out both;
+}
